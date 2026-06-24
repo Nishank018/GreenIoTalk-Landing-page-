@@ -20,10 +20,14 @@ body {
 :root {
     /* color */
     --bg-color: #f4eeee;
-    --nav-bg-color: #ddd4d4;
+    --nav-bg-color:#235333;
+    --button-bg-color:#C8F88A;
+    --button-hover-color: #E6D9B6;
 
-    --text-color: #222222;
+    --text-color: #3d4940;
     --text-color-light: #666666;
+    --text-color-wh: rgb(217, 224, 212);
+
 
     --primary-color: #2563eb;
     --primary-color-hover: #1d4ed8;
@@ -43,6 +47,7 @@ body {
     --space-md: 16px;
     --space-lg: 24px;
     --space-xl: 32px;
+    --spacd-2xl:38px;
 
 
     /* font size */
@@ -78,85 +83,132 @@ body {
 }
 
 
-/* NAVBAR */
 
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: var(--z-navbar);
-    padding: var(--space-sm);
+nav{
     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* background-color: pink; */
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 20px 0;
+   
 }
 
-/* CONTAINER */
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-
+nav img{
+    height: 65px;
+}
+.nav-elm{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
 
-    height: 70px;
-    padding: 0 var(--space-lg);
-
-    background-color: var(--nav-bg-color);
-    border-radius: var(--border-rd-3xl);
 }
-
-/* LOGO */
-
-.logo {
-    text-decoration: none;
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--text-color);
-}
-
-.logo-green {
-    color: #22c55e;
-}
-
-/* NAV LINKS */
-
-.nav-links {
+.nav-elm ul{
     display: flex;
-    gap: var(--space-lg);
     list-style: none;
     
+    border-radius: var(--border-rd-full); /* The pill shape */
+    background-color: var(--nav-bg-color);
+    gap: 0;
+    /*overflow: hidden;  This is CRITICAL: it clips the children to the parent's radius */
 }
-
-.nav-links a {
+.nav-elm ul li a{
     text-decoration: none;
-    color: var(--text-color);
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-medium);
-
-    transition: color 0.3s ease;
+    color: var(--text-color-wh);
+    display: block;
+    padding: 12px 24px;
+    border-radius: 0; /* No rounding by default, so they look like 'tiles' */
+    transition: background-color 0.3s ease;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-light);
+          
+}
+.nav-elm ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent color over the nav color */
+}
+.nav-elm ul li:first-child{
+    border-top-left-radius: var(--border-rd-full);
+}
+.nav-elm ul li:last-child{
+    border-top-right-radius: var(--border-rd-full);
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-/* CTA BUTTON */
-
-.cta-button {
+.cta-button, .first {
     text-decoration: none;
-
-    background-color: var(--primary-color);
-    color: white;
-
-    padding: 10px 20px;
-
+    font-size: var(--font-size-md);
+    
+    padding: 12px var(--space-md);
     border-radius: var(--border-rd-full);
-
-    font-weight: var(--font-weight-medium);
-
+    color: var(--text-color);
+    background-color:var(--button-bg-color) ;
+    color: var(--text-color);
+    text-align: center;
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: var(--primary-color-hover);
+.first:hover{
+    background-color: var(--button-hover-color);
 }
+
+
+.tab-nav{
+    background-color: var(--nav-bg-color);
+   
+    margin: 0 40px;
+    display: none;
+    border-radius: var(--border-rd-xl);
+}
+
+.toggle{
+    display: none;
+}
+@media(max-width:1079px){
+    .tab-nav{
+        display: flex;
+        
+        justify-content: left;
+        overflow: auto;
+        height: auto;
+        width: auto;
+    }
+    .tab-nav ul{
+        width: 100%;
+        margin-left: var(--space-md);
+        padding: var(--space-md);
+        list-style: none;
+
+    }
+    .tab-nav ul li a{
+        text-decoration: none;
+        color: var(--text-color-wh);
+        font-size: var(--font-size-lg);
+
+    }
+
+    .nav-elm{
+        display: none;
+    }
+    .toggle{
+        display: inline-block;
+
+    }
+    .toggle a{
+        border: 1px solid;
+        text-decoration: none;
+        color: var(--text-color);
+        padding: 12px var(--space-md);
+        border-radius: var(--border-rd-full);
+        font-size: var(--font-size-md);
+
+    }
+
+    
+
+}
+
+
