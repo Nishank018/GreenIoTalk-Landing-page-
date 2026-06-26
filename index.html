@@ -4,57 +4,396 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenIoTalk</title>
+    <meta name="description" content="GreenioTalk is a premium storytelling platform documenting the companies, founders, technologies, and events shaping the green energy ecosystem.">
+    <title>GreenioTalk — Documenting India's Green Energy Ecosystem</title>
+    
+    <!-- CSS & Fonts -->
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
 
 <body>
-    <header>
-        <nav class="navbar">
-
-            <div class="logo-img">
-                <a href="/" class="logo">
-                    <img src="assets/images/edited-photo.png" alt="">
+    <!-- Header / Navbar -->
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <div class="logo-container">
+                <a href="#home" class="logo">
+                    <img src="assets/images/edited-photo.png" alt="GreenioTalk Logo">
                 </a>
             </div>
 
-            <div class="nav-elm">
+            <div class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Episodes</a></li>
-                    <li><a href="#">Guests</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#stories" class="nav-link">Stories</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#apply" class="nav-link">Get Featured</a></li>
                 </ul>
-
-                <a href="#" class="cta-button first">
-                    Book Interview
+                <a href="#apply" class="cta-button primary-cta">
+                    Apply To Be Featured
                 </a>
-
-            </div>
-            <div class="toggle">
-                <a href="#">Menu <i class="ri-menu-line"></i></a>
-
             </div>
 
-
-
+            <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </nav>
 
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav">
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#apply">Get Featured</a></li>
+            </ul>
+            <a href="#apply" class="cta-button mobile-cta">
+                Apply To Be Featured
+            </a>
+        </div>
     </header>
-    <div class="tab-nav">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Episodes</a></li>
-            <li><a href="#">Guests</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">About</a></li>
 
-        </ul>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content scroll-reveal">
+                    <div class="badge">
+                        <i class="ri-pulse-line"></i> India's Green Energy Storyteller
+                    </div>
+                    <h1>Stories From India's Green Energy Ecosystem</h1>
+                    <p class="hero-subtext">
+                        From factory floors to industry events, GreenioTalk brings conversations, insights, and stories from the people building the future of sustainable energy.
+                    </p>
+                    <div class="hero-ctas">
+                        <button class="cta-button primary-cta play-story-btn">
+                            <i class="ri-play-fill"></i> Watch Latest Story
+                        </button>
+                        <a href="#apply" class="cta-button secondary-cta">
+                            Get Featured <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
 
+                <!-- Collage Layout -->
+                <div class="hero-collage scroll-reveal delay-1">
+                    <div class="collage-item large">
+                        <img src="assets/images/factory_visit.png" alt="Factory Floor Visit">
+                        <div class="collage-caption">Factory Visits</div>
+                    </div>
+                    <div class="collage-item top-right">
+                        <img src="assets/images/founder_interview.png" alt="Founder Conversation">
+                        <div class="collage-caption">Founder Conversations</div>
+                    </div>
+                    <div class="collage-item bottom-right">
+                        <img src="assets/images/exhibition_coverage.png" alt="Exhibition Coverage">
+                        <div class="collage-caption">Event Coverage</div>
+                    </div>
+                    <div class="collage-item floating-tech">
+                        <img src="assets/images/green_technology.png" alt="Green Tech Hardware">
+                        <div class="collage-caption">Tech Spotlights</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Story Section -->
+        <section class="featured-section" id="stories">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <span class="section-tag">Featured Story</span>
+                    <h2>The Latest Industry Feature</h2>
+                    <p class="section-desc">Explore the newest and most impactful story documented by our team on the ground.</p>
+                </div>
+
+                <div class="featured-card scroll-reveal delay-1">
+                    <div class="featured-thumbnail play-story-btn">
+                        <img src="assets/images/featured_thumbnail.png" alt="Featured Story Solar panel assembly Gigafactory">
+                        <div class="play-overlay">
+                            <div class="play-icon-circle">
+                                <i class="ri-play-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-details">
+                        <div class="category-badge">
+                            <i class="ri-settings-4-line"></i> Factory Visit
+                        </div>
+                        <h3>Inside India's Largest Solar Panel Gigafactory</h3>
+                        <p class="featured-desc">
+                            A deep dive into the automated gigawatt-scale assembly lines where state-of-the-art solar cells are manufactured to power India's renewable energy transition. We interview the engineering leads and walk the production floors.
+                        </p>
+                        <button class="cta-button inline-cta play-story-btn">
+                            Watch Story <i class="ri-play-mini-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Cover Section -->
+        <section class="cover-section">
+            <div class="container">
+                <div class="section-header center scroll-reveal">
+                    <span class="section-tag">What We Cover</span>
+                    <h2>Documenting the Green Transition</h2>
+                    <p class="section-desc">Helping the industry understand the GreenioTalk ecosystem through a variety of editorial formats.</p>
+                </div>
+
+                <div class="cover-grid">
+                    <!-- Card 1 -->
+                    <div class="cover-card scroll-reveal delay-1">
+                        <div class="card-image">
+                            <img src="assets/images/factory_visit.png" alt="Factory Visits">
+                        </div>
+                        <div class="card-content">
+                            <h3>Factory Visits</h3>
+                            <p>Explore facilities, manufacturing processes, and operations behind key clean energy equipment.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="cover-card scroll-reveal delay-2">
+                        <div class="card-image">
+                            <img src="assets/images/founder_interview.png" alt="Founder Conversations">
+                        </div>
+                        <div class="card-content">
+                            <h3>Founder Conversations</h3>
+                            <p>Hear the stories, struggles, and strategic visions of pioneering industry leaders.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="cover-card scroll-reveal delay-3">
+                        <div class="card-image">
+                            <img src="assets/images/exhibition_coverage.png" alt="Event Coverage">
+                        </div>
+                        <div class="card-content">
+                            <h3>Event Coverage</h3>
+                            <p>Get insights and key highlights from major green energy exhibitions and national conferences.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="cover-card scroll-reveal delay-4">
+                        <div class="card-image">
+                            <img src="assets/images/green_technology.png" alt="Technology Spotlights">
+                        </div>
+                        <div class="card-content">
+                            <h3>Technology Spotlights</h3>
+                            <p>Discover innovative products, battery tech, and smart-grid solutions shaping the future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Get Featured Section -->
+        <section class="why-section" id="about">
+            <div class="container">
+                <div class="why-grid">
+                    <div class="why-intro scroll-reveal">
+                        <span class="section-tag">Why Get Featured</span>
+                        <h2>Share Your Story With The Industry</h2>
+                        <p class="why-subtext">
+                            GreenioTalk is a dedicated media platform focused on bringing green energy solutions to light. Getting featured allows companies to showcase their engineering, leadership, and vision to a highly targeted, professional audience.
+                        </p>
+                        <div class="why-badge-group">
+                            <div class="why-badge-item">
+                                <i class="ri-checkbox-circle-fill"></i> Professional Documentary Approach
+                            </div>
+                            <div class="why-badge-item">
+                                <i class="ri-checkbox-circle-fill"></i> Highly Relevant B2B Audience
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="benefits-grid">
+                        <!-- Benefit 1 -->
+                        <div class="benefit-card scroll-reveal delay-1">
+                            <div class="benefit-icon">
+                                <i class="ri-eye-line"></i>
+                            </div>
+                            <h3>Industry Visibility</h3>
+                            <p>Reach key decision-makers, clean-tech investors, and potential partners across the green energy sector.</p>
+                        </div>
+                        <!-- Benefit 2 -->
+                        <div class="benefit-card scroll-reveal delay-2">
+                            <div class="benefit-icon">
+                                <i class="ri-award-line"></i>
+                            </div>
+                            <h3>Founder Branding</h3>
+                            <p>Establish thought leadership and present the narrative behind your clean energy venture.</p>
+                        </div>
+                        <!-- Benefit 3 -->
+                        <div class="benefit-card scroll-reveal delay-3">
+                            <div class="benefit-icon">
+                                <i class="ri-cpu-line"></i>
+                            </div>
+                            <h3>Technology Showcase</h3>
+                            <p>Demonstrate your facilities, R&D labs, and technical products in a high-fidelity journalistic style.</p>
+                        </div>
+                        <!-- Benefit 4 -->
+                        <div class="benefit-card scroll-reveal delay-4">
+                            <div class="benefit-icon">
+                                <i class="ri-calendar-todo-line"></i>
+                            </div>
+                            <h3>Long-Term Digital Presence</h3>
+                            <p>Build a lasting record of your achievements that continues to drive trust and digital credibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Section -->
+        <section class="apply-section" id="apply">
+            <div class="container">
+                <div class="apply-grid">
+                    <div class="apply-info scroll-reveal">
+                        <span class="section-tag invert">Get Featured</span>
+                        <h2>Want To Be Featured On GreenioTalk?</h2>
+                        <p>
+                            We are always looking for innovators, facilities, and founders building the green energy ecosystem. Fill out the application form with your company details and story, and our editorial team will get in touch with you.
+                        </p>
+                        <div class="testimonial">
+                            <p class="testimonial-text">
+                                "The feature on GreenioTalk gave our technology immense credibility in the B2B sector, opening doors to direct inquiries and industry connections."
+                            </p>
+                            <p class="testimonial-author">
+                                — Founder, CleanTech Solutions India
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-container scroll-reveal delay-1">
+                        <form id="applicationForm" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="companyName">Company Name <span class="required">*</span></label>
+                                    <input type="text" id="companyName" name="companyName" placeholder="e.g. EcoVolt Systems" required>
+                                    <span class="error-msg">Please enter your company name</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="industry">Industry <span class="required">*</span></label>
+                                    <select id="industry" name="industry" required>
+                                        <option value="" disabled selected>Select Industry</option>
+                                        <option value="Solar Energy">Solar Energy</option>
+                                        <option value="Wind Energy">Wind Energy</option>
+                                        <option value="Energy Storage / Battery">Energy Storage / Battery</option>
+                                        <option value="Electric Vehicles (EV)">Electric Vehicles (EV)</option>
+                                        <option value="Hydrogen / Biofuels">Hydrogen / Biofuels</option>
+                                        <option value="Smart Grids / IoT">Smart Grids / IoT</option>
+                                        <option value="Other Green Tech">Other Green Tech</option>
+                                    </select>
+                                    <span class="error-msg">Please select your industry</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="website">Website <span class="required">*</span></label>
+                                    <input type="url" id="website" name="website" placeholder="e.g. www.ecovoltsystems.com" required>
+                                    <span class="error-msg">Please enter a valid website URL</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="location">Location <span class="required">*</span></label>
+                                    <input type="text" id="location" name="location" placeholder="e.g. Bengaluru, India" required>
+                                    <span class="error-msg">Please enter your location</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="contactPerson">Contact Person <span class="required">*</span></label>
+                                    <input type="text" id="contactPerson" name="contactPerson" placeholder="e.g. Rahul Sharma" required>
+                                    <span class="error-msg">Please enter a contact name</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="e.g. rahul@ecovoltsystems.com" required>
+                                    <span class="error-msg">Please enter a valid email address</span>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="story">Tell Us About Your Story <span class="required">*</span></label>
+                                <textarea id="story" name="story" rows="4" placeholder="Briefly describe your company, technology, and what story you want to share..." required></textarea>
+                                <span class="error-msg">Please describe your story</span>
+                            </div>
+
+                            <button type="submit" class="cta-button submit-btn">
+                                <span>Apply To Be Featured</span>
+                                <i class="ri-send-plane-fill"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="assets/images/edited-photo.png" alt="GreenioTalk Logo" class="footer-logo">
+                <p>
+                    An industry storytelling platform documenting the innovators, technologies, and factories shaping the sustainable energy landscape in India.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+                    <a href="#" aria-label="Twitter / X"><i class="ri-twitter-x-fill"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#apply">Get Featured</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="ri-mail-line"></i> info@greeniotalk.com</li>
+                    <li><i class="ri-map-pin-line"></i> New Delhi, India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 GreenioTalk. All rights reserved. Documenting India's Green Transition.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Popup -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-backdrop"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" aria-label="Close Modal">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="video-player-container">
+                <div class="mock-player">
+                    <!-- YouTube video iframe (using a beautiful green tech/solar video) -->
+                    <iframe id="modalIframe" src="" title="Green Energy Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 
-
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 
 </html>
